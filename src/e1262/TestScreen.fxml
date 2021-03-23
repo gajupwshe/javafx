@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import eu.hansolo.medusa.Gauge?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="e1262.TestScreenController">
+   <children>
+      <VBox opacity="0.9" prefHeight="900.0" prefWidth="1620.0">
+         <children>
+            <HBox fx:id="sectionHeader1" prefHeight="100.0" prefWidth="1334.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="85.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="100.0" fitWidth="305.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../FLOWSERVE_350(e1132)/with_Interlock/flowserve_E1132/backup_flowserve/flowTestWare/src/hydro_380/images/logo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="868.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="50.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="50.0" prefHeight="30.0" vgrow="ALWAYS" />
+                           </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="HYDROSTATIC TEST STAND" GridPane.halignment="RIGHT">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </GridPane>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" maxWidth="-Infinity" prefHeight="75.0" prefWidth="500.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <GridPane prefWidth="480.0" VBox.vgrow="ALWAYS">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="400.0" prefWidth="500.0" />
+                              <ColumnConstraints />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Text fx:id="txtMode" strokeType="OUTSIDE" strokeWidth="0.0" text="Machine in Mode" GridPane.columnSpan="2" GridPane.halignment="RIGHT">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fx:id="imgEmergency" fitHeight="84.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT">
+                                 <GridPane.margin>
+                                    <Insets top="70.0" />
+                                 </GridPane.margin>
+                                 <image>
+                                    <Image url="@../../../FLOWSERVE_350(e1132)/with_Interlock/flowserve_E1132/backup_flowserve/flowTestWare/src/hydro_380/images/emergency.gif" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgAuto" fitHeight="81.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT">
+                                 <image>
+                                    <Image url="@../../../FLOWSERVE_350(e1132)/with_Interlock/flowserve_E1132/backup_flowserve/flowTestWare/src/hydro_380/images/Auto.gif" />
+                                 </image>
+                                 <GridPane.margin>
+                                    <Insets top="65.0" />
+                                 </GridPane.margin>
+                              </ImageView>
+                              <ImageView fx:id="imgManual" fitHeight="67.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT">
+                                 <image>
+                                    <Image url="@../../../FLOWSERVE_350(e1132)/with_Interlock/flowserve_E1132/backup_flowserve/flowTestWare/src/hydro_380/images/Manual.gif" />
+                                 </image>
+                                 <GridPane.margin>
+                                    <Insets top="65.0" />
+                                 </GridPane.margin>
+                              </ImageView>
+                              <Text fx:id="txtDate" fill="#0099ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets right="20.0" />
+                           </VBox.margin>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox fx:id="sectionHeader" minHeight="-Infinity" prefHeight="33.0" prefWidth="1620.0" style="-fx-background-color: #2F333E;">
+               <children>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="250.0">
+                     <children>
+                        <JFXButton fx:id="btnHome" onAction="#btnHomeAction" prefHeight="50.0" prefWidth="250.0" style="-fx-background-radius: 0;" text="HOME" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="250.0">
+                     <children>
+                        <JFXButton fx:id="btnInitialScreen" onAction="#btnInitialScreenAction" prefHeight="50.0" prefWidth="250.0" style="-fx-background-radius: 0;" text="Initial Settings" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="250.0">
+                     <children>
+                        <JFXButton fx:id="btntestScreen" prefHeight="50.0" prefWidth="250.0" style="-fx-background-radius: 0; -fx-background-color: #0099FF;" text="Test" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="250.0">
+                     <children>
+                        <JFXButton fx:id="btnReport" onAction="#btnReportAction" prefHeight="50.0" prefWidth="250.0" style="-fx-background-radius: 0;" text="Report" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="1010.0" layoutY="10.0" prefHeight="250.0">
+                     <children>
+                        <JFXButton fx:id="btnSystemCheck" onAction="#btnSystemCheckAction" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 0;" text="System Check" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="250.0">
+                     <children>
+                        <JFXButton fx:id="btnAdmin" onAction="#btnAdminAction" prefHeight="50.0" prefWidth="175.0" style="-fx-background-radius: 0;" text="Admin" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="250.0">
+                     <children>
+                        <JFXHamburger fx:id="burger" alignment="CENTER_RIGHT" GridPane.halignment="RIGHT">
+                           <GridPane.margin>
+                              <Insets right="100.0" />
+                           </GridPane.margin>
+                        </JFXHamburger>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <BorderPane style="-fx-background-color: #FFFFFF;">
+               <center>
+                  <HBox fx:id="hboxgauge" alignment="CENTER" maxHeight="400.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox fx:id="vboxgauge" alignment="CENTER" fillWidth="false" maxHeight="400.0" prefHeight="400.0" prefWidth="1626.0">
+                           <children>
+                              <GridPane fx:id="gridviewgauge" prefHeight="280.0" prefWidth="1386.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="283.0" minWidth="241.0" prefWidth="241.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="364.0" minWidth="248.0" prefWidth="294.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="367.0" minWidth="225.0" prefWidth="319.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="415.0" minWidth="222.0" prefWidth="415.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="415.0" minWidth="222.0" prefWidth="415.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="136.0" minHeight="6.0" prefHeight="73.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="344.0" minHeight="207.0" prefHeight="207.0" valignment="CENTER" vgrow="ALWAYS" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Clamping Set Pressure" GridPane.halignment="CENTER" />
+                                    <Gauge fx:id="GaugeSetHydraulic" autoScale="false" borderWidth="4.0" decimals="0" highlightAreas="true" highlightSections="true" knobType="METAL" lcdDesign="BLUE" lcdFont="LCD" majorTickMarkType="PILL" majorTickSpace="200.0" markersVisible="true" maxValue="600.0" mediumTickMarkType="TRAPEZOID" mediumTickMarksVisible="false" minMeasuredValueVisible="true" minorTickSpace="50.0" needleShape="FLAT" needleSize="THIN" needleType="VARIOMETER" prefHeight="107.0" prefWidth="285.0" shadowsEnabled="true" threshold="0.0" tickMarkRingVisible="true" title="CTPL" unit="psi" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                       <borderPaint>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#08a0ff" />
+                                                <Stop color="#0d0909" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </borderPaint>
+                                       <backgroundPaint>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#00aceb1d" />
+                                                <Stop color="#ffffff33" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </backgroundPaint>
+                                       <foregroundPaint>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#00a6ffc1" />
+                                                <Stop color="#000000a5" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </foregroundPaint>
+                                    </Gauge>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Actual Clamping Pressure" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                                    <Gauge fx:id="GaugeActualHydraulic" autoScale="false" borderWidth="4.0" decimals="0" highlightAreas="true" highlightSections="true" knobType="METAL" lcdDesign="BLUE" lcdFont="LCD" majorTickMarkType="PILL" majorTickSpace="200.0" markersVisible="true" maxValue="600.0" mediumTickMarkType="TRAPEZOID" mediumTickMarksVisible="false" minMeasuredValueVisible="true" minorTickSpace="50.0" needleShape="FLAT" needleSize="THIN" needleType="VARIOMETER" prefHeight="214.0" prefWidth="317.0" shadowsEnabled="true" threshold="0.0" tickMarkRingVisible="true" title="CTPL" unit="psi" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <borderPaint>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#08a0ff" />
+                                                <Stop color="#0d0909" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </borderPaint>
+                                       <backgroundPaint>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#00aceb1d" />
+                                                <Stop color="#ffffff33" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </backgroundPaint>
+                                       <foregroundPaint>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#00a6ffc1" />
+                                                <Stop color="#000000a5" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </foregroundPaint>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Gauge>
+                                    <Text fx:id="txtLabelSetGauge" strokeType="OUTSIDE" strokeWidth="0.0" text="Hydro Set Pressure" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                                    <Gauge fx:id="GaugeSetHydro" autoScale="false" borderWidth="4.0" decimals="0" highlightAreas="true" highlightSections="true" knobType="METAL" lcdDesign="BLUE" lcdFont="LCD" majorTickMarkType="PILL" majorTickSpace="200.0" markersVisible="true" maxValue="600.0" mediumTickMarkType="TRAPEZOID" mediumTickMarksVisible="false" minMeasuredValueVisible="true" minorTickSpace="50.0" needleShape="FLAT" needleSize="THIN" needleType="VARIOMETER" shadowsEnabled="true" threshold="0.0" tickMarkRingVisible="true" title="CTPL" unit="psi" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <borderPaint>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#08a0ff" />
+                                                <Stop color="#0d0909" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </borderPaint>
+                                       <backgroundPaint>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#00aceb1d" />
+                                                <Stop color="#ffffff33" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </backgroundPaint>
+                                       <foregroundPaint>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#00a6ffc1" />
+                                                <Stop color="#000000a5" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </foregroundPaint>
+                                    </Gauge>
+                                    <Text fx:id="txtLabelgaugeAside" strokeType="OUTSIDE" strokeWidth="0.0" text="Actual Hydro Pressure" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+                                    <Gauge fx:id="GaugeActualHydro_A" autoScale="false" borderWidth="4.0" decimals="0" highlightAreas="true" highlightSections="true" knobType="METAL" lcdDesign="BLUE" lcdFont="LCD" majorTickMarkType="PILL" majorTickSpace="200.0" markersVisible="true" maxValue="600.0" mediumTickMarkType="TRAPEZOID" mediumTickMarksVisible="false" minMeasuredValueVisible="true" minorTickSpace="50.0" needleShape="FLAT" needleSize="THIN" needleType="VARIOMETER" shadowsEnabled="true" subTitle="Side A" threshold="0.0" tickMarkRingVisible="true" title="CTPL" unit="psi" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <borderPaint>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#08a0ff" />
+                                                <Stop color="#0d0909" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </borderPaint>
+                                       <backgroundPaint>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#00aceb1d" />
+                                                <Stop color="#ffffff33" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </backgroundPaint>
+                                       <foregroundPaint>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#00a6ffc1" />
+                                                <Stop color="#000000a5" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </foregroundPaint>
+                                    </Gauge>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </GridPane>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </HBox>
+               </center>
+               <top>
+                  <HBox prefHeight="50.0" prefWidth="1807.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox prefHeight="50.0" prefWidth="1484.0">
+                           <children>
+                              <GridPane prefHeight="50.0" prefWidth="1883.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="313.0" minWidth="204.0" prefWidth="204.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="72.0" minWidth="0.0" prefWidth="0.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="381.0" minWidth="250.0" prefWidth="295.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="82.0" minWidth="0.0" prefWidth="0.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="436.0" minWidth="250.0" prefWidth="344.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="118.0" minWidth="2.0" prefWidth="2.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="380.0" minWidth="250.0" prefWidth="296.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="106.0" minWidth="0.0" prefWidth="0.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="367.0" minWidth="198.0" prefWidth="251.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="7.0" prefWidth="7.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="250.0" prefWidth="395.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <JFXTextField fx:id="txtValveType" editable="false" focusColor="#0099ff" labelFloat="true" minWidth="200.0" promptText="Valve Type" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                       <padding>
+                                          <Insets left="20.0" right="20.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtValveSize" editable="false" focusColor="#0099ff" labelFloat="true" minWidth="200.0" promptText="Valve Size" GridPane.columnIndex="6" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                       <padding>
+                                          <Insets left="20.0" right="20.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtValveClass" editable="false" focusColor="#0099ff" labelFloat="true" minWidth="200.0" promptText="Valve Class" GridPane.columnIndex="4" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                       <padding>
+                                          <Insets left="20.0" right="20.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtTypeOfSealing" editable="false" focusColor="#0099ff" labelFloat="true" minWidth="200.0" promptText="Type of Sealing" GridPane.columnIndex="10" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                       <padding>
+                                          <Insets left="20.0" right="20.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtTestType" editable="false" focusColor="#0099ff" labelFloat="true" minWidth="200.0" promptText="Test Type">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="20.0" right="20.0" />
+                                       </padding>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtTypeOfLeakage" editable="false" focusColor="#0099ff" labelFloat="true" minWidth="200.0" promptText="Type of Leakage" GridPane.columnIndex="8">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="20.0" right="20.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                 </children>
+                              </GridPane>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="-50.0" top="50.0" />
+                     </BorderPane.margin>
+                  </HBox>
+               </top>
+               <bottom>
+                  <HBox fx:id="hboxtimers">
+                     <children>
+                        <VBox fx:id="vboxtimers" HBox.hgrow="ALWAYS">
+                           <children>
+                              <GridPane prefHeight="131.0" prefWidth="1870.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints minWidth="50.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="293.0" minWidth="257.0" prefWidth="257.0" />
+                                    <ColumnConstraints maxWidth="93.0" minWidth="50.0" prefWidth="93.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="337.0" minWidth="273.0" prefWidth="273.0" />
+                                    <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="120.0" minWidth="44.0" prefWidth="44.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="355.0" minWidth="300.0" prefWidth="355.0" />
+                                    <ColumnConstraints minWidth="50.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" minWidth="300.0" />
+                                    <ColumnConstraints maxWidth="214.0" minWidth="58.0" prefWidth="58.0" />
+                                    <ColumnConstraints maxWidth="382.0" minWidth="220.0" prefWidth="382.0" />
+                                    <ColumnConstraints maxWidth="-Infinity" minWidth="220.0" prefWidth="200.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <JFXTextField fx:id="txtActualLeakage" editable="false" focusColor="#0099ff" labelFloat="true" promptText="ACTUAL LEAKAGE" GridPane.columnIndex="9" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </GridPane.margin>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtCycleStatus" editable="false" focusColor="#0099ff" labelFloat="true" promptText="CYCLE STATUS" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </GridPane.margin>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtHoldingTimer" editable="false" focusColor="#0099ff" promptText="HOLDING TIMER" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </GridPane.margin>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtDrainDelay" editable="false" focusColor="#0099ff" GridPane.columnIndex="10" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </GridPane.margin>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtDrainTimer" editable="false" focusColor="#0099ff" promptText="DRAIN TIMER" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </GridPane.margin>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtOverAllTime" editable="false" focusColor="#0099ff" labelFloat="true" promptText="OVER ALL CYCLE TIME" GridPane.columnIndex="9" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </GridPane.margin>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtResult" editable="false" focusColor="#0099ff" labelFloat="true" promptText="RESULT" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </GridPane.margin>
+                                    </JFXTextField>
+                                    <HBox layoutX="896.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                       <children>
+                                          <ImageView fx:id="imgHolding" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                                       <children>
+                                          <ImageView fx:id="imgDrain" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                    </HBox>
+                                    <JFXDrawer fx:id="drawer" defaultDrawerSize="1920.0" direction="RIGHT" prefHeight="500.0" prefWidth="1864.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                       <children>
+                                          <JFXTextField fx:id="txtStabilizationTimer" editable="false" focusColor="#0099ff" promptText="STABILIZATION TIMER">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                             </padding>
+                                          </JFXTextField>
+                                       </children>
+                                    </JFXDrawer>
+                                    <JFXTextField fx:id="txtActualPressure" editable="false" focusColor="#0099ff" labelFloat="true" promptText="ACTUAL PRESSURE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </GridPane.margin>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtPeakPressure" editable="false" focusColor="#0099ff" labelFloat="true" promptText="PEAK PRESSURE" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtTestTime" editable="false" focusColor="#0099ff" labelFloat="true" promptText="TEST TIME" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </GridPane.margin>
+                                    </JFXTextField>
+                                 </children>
+                              </GridPane>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="50.0" top="-50.0" />
+                     </BorderPane.margin>
+                  </HBox>
+               </bottom>
+            </BorderPane>
+            <HBox fx:id="sectionFooter" alignment="CENTER" minHeight="-Infinity" prefHeight="50.0" style="-fx-background-color: #2F333E;">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Crientors Hydrothrust">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
